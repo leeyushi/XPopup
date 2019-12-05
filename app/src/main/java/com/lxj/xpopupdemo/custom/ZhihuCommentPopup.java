@@ -40,7 +40,6 @@ public class ZhihuCommentPopup extends BottomPopupView {
 
     @Override
     protected void onCreate() {
-        super.onCreate();
         recyclerView = findViewById(R.id.recyclerView);
         findViewById(R.id.tv_temp).setOnClickListener(new OnClickListener() {
             @Override
@@ -65,7 +64,7 @@ public class ZhihuCommentPopup extends BottomPopupView {
                             }
                         })
                         .asCustom(textBottomPopup)
-                        .show();
+                        .showWindow();
             }
         });
 
@@ -111,7 +110,7 @@ public class ZhihuCommentPopup extends BottomPopupView {
     //完全可见执行
     @Override
     protected void onShow() {
-        super.onShow();
+
     }
 
     //完全消失执行

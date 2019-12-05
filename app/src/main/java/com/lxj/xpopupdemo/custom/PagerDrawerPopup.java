@@ -34,7 +34,6 @@ public class PagerDrawerPopup extends DrawerPopupView {
     String[] titles = new String[]{"首页", "娱乐", "汽车", "八卦", "搞笑", "互联网"};
     @Override
     protected void onCreate() {
-        super.onCreate();
         tabLayout = findViewById(R.id.tabLayout);
         pager = findViewById(R.id.pager);
         pager.setAdapter(new PAdapter());
@@ -43,13 +42,13 @@ public class PagerDrawerPopup extends DrawerPopupView {
 
     @Override
     protected void onShow() {
-        super.onShow();
+
         Log.e("tag", "PagerDrawerPopup onShow");
     }
 
     @Override
     protected void onDismiss() {
-        super.onDismiss();
+
         Log.e("tag", "PagerDrawerPopup onDismiss");
     }
 

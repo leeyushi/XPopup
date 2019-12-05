@@ -120,6 +120,21 @@ public class BottomListPopupView extends BottomPopupView {
         recyclerView.setAdapter(adapter);
     }
 
+    @Override
+    protected void onCreate() {
+
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
+    }
+
     String title;
     String[] data;
     int[] iconIds;

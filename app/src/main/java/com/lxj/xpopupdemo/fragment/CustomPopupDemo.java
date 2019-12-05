@@ -55,7 +55,7 @@ public class CustomPopupDemo extends BaseFragment {
                                 .popupAnimation(data[position])
                                 .autoOpenSoftInput(true)
                                 .asCustom(customPopup)
-                                .show();
+                                .showWindow();
                     }
                 }, 200); //确保spinner的消失动画不影响XPopup动画，可以看得更清晰
 
@@ -118,7 +118,6 @@ public class CustomPopupDemo extends BaseFragment {
 
         @Override
         protected void onCreate() {
-            super.onCreate();
             recyclerView = findViewById(R.id.recyclerView);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             ArrayList<String> data = new ArrayList<>();
@@ -132,6 +131,16 @@ public class CustomPopupDemo extends BaseFragment {
                     holder.setText(android.R.id.text1, s);
                 }
             });
+        }
+
+        @Override
+        protected void onDismiss() {
+
+        }
+
+        @Override
+        protected void onShow() {
+
         }
 
 //        @Override

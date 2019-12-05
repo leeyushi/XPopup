@@ -46,6 +46,11 @@ public class CenterPopupView extends BasePopupView {
     }
 
     @Override
+    protected void onCreate() {
+
+    }
+
+    @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         setTranslationY(0);
@@ -63,6 +68,16 @@ public class CenterPopupView extends BasePopupView {
     protected int getMaxWidth() {
         return popupInfo.maxWidth==0 ? (int) (XPopupUtils.getWindowWidth(getContext()) * 0.86f)
                 : popupInfo.maxWidth;
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
     }
 
     @Override

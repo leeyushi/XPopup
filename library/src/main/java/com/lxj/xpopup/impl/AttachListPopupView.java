@@ -85,6 +85,21 @@ public class AttachListPopupView extends AttachPopupView {
         recyclerView.setAdapter(adapter);
     }
 
+    @Override
+    protected void onCreate() {
+
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
+    }
+
     String[] data;
     int[] iconIds;
 

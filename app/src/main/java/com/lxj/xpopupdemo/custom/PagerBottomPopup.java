@@ -37,19 +37,19 @@ public class PagerBottomPopup extends BottomPopupView {
 
     @Override
     protected void onCreate() {
-        super.onCreate();
+
         pager = findViewById(R.id.pager);
         pager.setAdapter(new PAdapter());
     }
 
     @Override
     protected void onShow() {
-        super.onShow();
+
     }
 
     @Override
     protected void onDismiss() {
-        super.onDismiss();
+
     }
 
     @Override

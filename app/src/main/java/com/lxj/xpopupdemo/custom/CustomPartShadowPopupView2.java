@@ -20,4 +20,19 @@ public class CustomPartShadowPopupView2 extends PartShadowPopupView {
         return R.layout.custom_part_shadow_popup2;
     }
 
+    @Override
+    protected void onCreate() {
+
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
+    }
+
 }

@@ -178,7 +178,7 @@ public abstract class BasePopupView extends FrameLayout implements OnNavigationB
         setLayoutParams(params);
     }
 
-    public BasePopupView show() {
+    public BasePopupView showWindow() {
         if (getParent() != null) return this;
         final Activity activity = (Activity) getContext();
         popupInfo.decorView = (ViewGroup) activity.getWindow().getDecorView();
@@ -376,8 +376,7 @@ public abstract class BasePopupView extends FrameLayout implements OnNavigationB
     /**
      * do init.
      */
-    protected void onCreate() {
-    }
+    protected abstract void onCreate();
 
     /**
      * 执行显示动画：动画由2部分组成，一个是背景渐变动画，一个是Content的动画；
@@ -548,21 +547,19 @@ public abstract class BasePopupView extends FrameLayout implements OnNavigationB
         if (isShow()) {
             dismiss();
         } else {
-            show();
+            showWindow();
         }
     }
 
     /**
      * 消失动画执行完毕后执行
      */
-    protected void onDismiss() {
-    }
+    protected  abstract void onDismiss();
 
     /**
      * 显示动画执行完毕后执行
      */
-    protected void onShow() {
-    }
+    protected abstract void onShow();
 
     @Override
     protected void onDetachedFromWindow() {

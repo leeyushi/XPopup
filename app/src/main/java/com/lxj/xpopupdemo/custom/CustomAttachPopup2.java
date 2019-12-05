@@ -23,7 +23,17 @@ public class CustomAttachPopup2 extends AttachPopupView {
 
     @Override
     protected void onCreate() {
-        super.onCreate();
+
+
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
 
     }
 

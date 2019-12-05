@@ -53,6 +53,21 @@ public class PositionPopupView extends BasePopupView {
     }
 
     @Override
+    protected void onCreate() {
+
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
+    }
+
+    @Override
     protected PopupAnimator getPopupAnimator() {
         return new ScrollScaleAnimator(getPopupContentView(), ScaleAlphaFromCenter);
     }

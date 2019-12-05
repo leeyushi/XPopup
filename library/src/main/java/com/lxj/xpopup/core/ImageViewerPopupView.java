@@ -125,6 +125,11 @@ public class ImageViewerPopupView extends BasePopupView implements OnDragChangeL
         }
     }
 
+    @Override
+    protected void onCreate() {
+
+    }
+
     private void setupPlaceholder() {
         placeholderView.setVisibility(isShowPlaceholder ? VISIBLE : INVISIBLE);
         if (isShowPlaceholder) {
@@ -423,8 +428,13 @@ public class ImageViewerPopupView extends BasePopupView implements OnDragChangeL
 
     @Override
     protected void onDismiss() {
-        super.onDismiss();
-        srcView = null;
+
+
+    }
+
+    @Override
+    protected void onShow() {
+
     }
 
     @Override

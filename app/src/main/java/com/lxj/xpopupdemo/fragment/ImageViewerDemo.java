@@ -83,7 +83,7 @@ public class ImageViewerDemo extends BaseFragment {
             public void onClick(View v) {
                 new XPopup.Builder(getContext())
                         .asImageViewer(image1, url1, true, -1, -1, 50, false,new ImageLoader())
-                        .show();
+                        .showWindow();
             }
         });
         image2.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +91,7 @@ public class ImageViewerDemo extends BaseFragment {
             public void onClick(View v) {
                 new XPopup.Builder(getContext())
                         .asImageViewer(image2, url2, new ImageLoader())
-                        .show();
+                        .showWindow();
             }
         });
 
@@ -113,7 +113,7 @@ public class ImageViewerDemo extends BaseFragment {
 //                viewerPopup.isShowSaveButton(false);//是否显示保存按钮
                 new XPopup.Builder(getContext())
                         .asCustom(viewerPopup)
-                        .show();
+                        .showWindow();
             }
         });
     }
@@ -143,7 +143,7 @@ public class ImageViewerDemo extends BaseFragment {
                             popupView.updateSrcView((ImageView)rv.getChildAt(position));
                         }
                     }, new ImageLoader())
-                            .show();
+                            .showWindow();
                 }
             });
         }
@@ -188,7 +188,7 @@ public class ImageViewerDemo extends BaseFragment {
                             popupView.updateSrcView((ImageView) pager.getChildAt(realPosi));
                         }
                     }, new ImageLoader())
-                            .show();
+                            .showWindow();
                 }
             });
 

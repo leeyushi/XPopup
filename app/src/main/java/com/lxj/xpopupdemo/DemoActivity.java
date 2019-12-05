@@ -62,7 +62,7 @@ public class DemoActivity extends AppCompatActivity {
                     return;
                 }
                 if(popupView.isDismiss()){
-                    popupView.show();
+                    popupView.showWindow();
                 }
             }
         });
@@ -77,7 +77,7 @@ public class DemoActivity extends AppCompatActivity {
 
     public void showMultiPopup(){
         final BasePopupView loadingPopup = new XPopup.Builder(this).asLoading();
-        loadingPopup.show();
+        loadingPopup.showWindow();
         new XPopup.Builder(DemoActivity.this)
                 .autoDismiss(false)
                 .asBottomList("haha", new String[]{"点我显示弹窗", "点我显示弹窗", "点我显示弹窗", "点我显示弹窗"}, new OnSelectListener() {
@@ -88,9 +88,9 @@ public class DemoActivity extends AppCompatActivity {
                             public void onConfirm() {
                                 loadingPopup.dismiss();
                             }
-                        }).show();
+                        }).showWindow();
                     }
-                }).show();
+                }).showWindow();
 
 
     }

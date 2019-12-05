@@ -54,4 +54,14 @@ public class ListDrawerPopupView extends DrawerPopupView {
         });
 
     }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
+    }
 }

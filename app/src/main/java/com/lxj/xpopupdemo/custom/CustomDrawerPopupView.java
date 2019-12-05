@@ -28,7 +28,6 @@ public class CustomDrawerPopupView extends DrawerPopupView {
 
     @Override
     protected void onCreate() {
-        super.onCreate();
         Log.e("tag", "CustomDrawerPopupView onCreate");
         text = findViewById(R.id.text);
         findViewById(R.id.btn).setOnClickListener(new OnClickListener() {
@@ -46,13 +45,11 @@ public class CustomDrawerPopupView extends DrawerPopupView {
 
     @Override
     protected void onShow() {
-        super.onShow();
         Log.e("tag", "CustomDrawerPopupView onShow");
     }
 
     @Override
     protected void onDismiss() {
-        super.onDismiss();
         Log.e("tag", "CustomDrawerPopupView onDismiss");
     }
 }

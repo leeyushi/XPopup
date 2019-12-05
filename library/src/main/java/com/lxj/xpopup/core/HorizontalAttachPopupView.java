@@ -36,6 +36,21 @@ public class HorizontalAttachPopupView extends AttachPopupView {
         }
     }
 
+    @Override
+    protected void onCreate() {
+
+    }
+
+    @Override
+    protected void onDismiss() {
+
+    }
+
+    @Override
+    protected void onShow() {
+
+    }
+
     /**
      * 执行附着逻辑
      */

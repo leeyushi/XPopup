@@ -75,7 +75,7 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
                             public void onSelect(int position, String text) {
                                 toast(text);
                             }
-                        }).show();
+                        }).showWindow();
                         return true;
                     }
                 });
@@ -112,7 +112,7 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
                     .asCustom(new CustomPartShadowPopupView(getContext()));
         }
 
-        popupView.show();
+        popupView.showWindow();
     }
 
     @Override
@@ -128,27 +128,27 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
                         .popupPosition(PopupPosition.Right)//右边
                         .hasStatusBarShadow(true) //启用状态栏阴影
                         .asCustom(drawerPopupView)
-                        .show();
+                        .showWindow();
                 break;
             case R.id.tv_select:
                 new XPopup.Builder(getContext())
                         .atView(v)
                         .asCustom(new CustomPartShadowPopupView(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.tvCenter:
                 new XPopup.Builder(getContext())
                         .atView(v)
                         .popupPosition(PopupPosition.Top)
                         .asCustom(new CustomPartShadowPopupView2(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.tvCenter2:
                 new XPopup.Builder(getContext())
                         .atView(v)
                         .popupPosition(PopupPosition.Bottom)
                         .asCustom(new CustomPartShadowPopupView2(getContext()))
-                        .show();
+                        .showWindow();
                 break;
         }
     }

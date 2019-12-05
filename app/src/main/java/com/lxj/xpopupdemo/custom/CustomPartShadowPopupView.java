@@ -25,7 +25,6 @@ public class CustomPartShadowPopupView extends PartShadowPopupView {
     TextView text;
     @Override
     protected void onCreate() {
-        super.onCreate();
         text = findViewById(R.id.text);
         Log.e("tag","CustomPartShadowPopupView onCreate");
         findViewById(R.id.btnClose).setOnClickListener(new OnClickListener() {
@@ -45,13 +44,13 @@ public class CustomPartShadowPopupView extends PartShadowPopupView {
 
     @Override
     protected void onShow() {
-        super.onShow();
+
         Log.e("tag","CustomPartShadowPopupView onShow");
     }
 
     @Override
     protected void onDismiss() {
-        super.onDismiss();
+
         Log.e("tag","CustomPartShadowPopupView onDismiss");
     }
 }

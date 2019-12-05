@@ -74,7 +74,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                 toast("click " + text);
                             }
                         })
-                        .show();
+                        .showWindow();
                 return false;
             }
         });
@@ -122,7 +122,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                 toast("click confirm");
                             }
                         }, null, false)
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnBindLayout:  //复用项目中已有布局，使用XPopup已有的交互能力
                 new XPopup.Builder(getContext())
@@ -163,7 +163,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                         }, null, false)
                         .bindLayout(R.layout.my_confim_popup) //绑定已有布局
 //                        .bindItemLayout() //带列表的弹窗还会有这样一个方法
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowInputConfirm: //带确认和取消按钮，输入框的弹窗
                 new XPopup.Builder(getContext())
@@ -180,7 +180,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
 //                                new XPopup.Builder(getContext()).asLoading().show();
                                     }
                                 })
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowCenterList: //在中间弹出的List列表弹窗
                 new XPopup.Builder(getContext())
@@ -192,7 +192,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                         toast("click " + text);
                                     }
                                 })
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowCenterListWithCheck: //在中间弹出的List列表弹窗，带选中效果
                 new XPopup.Builder(getContext())
@@ -204,12 +204,12 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                         toast("click " + text);
                                     }
                                 })
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowLoading: //在中间弹出的Loading加载框
                 final LoadingPopupView loadingPopup = (LoadingPopupView) new XPopup.Builder(getContext())
                         .asLoading("正在加载中")
-                        .show();
+                        .showWindow();
                 loadingPopup.postDelayed(new Runnable() {
                     @Override
                     public void run() { loadingPopup.setTitle("正在加载中啊啊啊"); }
@@ -231,7 +231,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                         toast("click " + text);
                                     }
                                 })
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowBottomListWithCheck: //从底部弹出，带手势拖拽的列表弹窗,带选中效果
                 new XPopup.Builder(getContext())
@@ -243,19 +243,19 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                         toast("click " + text);
                                     }
                                 })
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnCustomBottomPopup: //自定义的底部弹窗
                 new XPopup.Builder(getContext())
                         .moveUpToKeyboard(false) //如果不加这个，评论弹窗会移动到软键盘上面
                         .asCustom(new ZhihuCommentPopup(getContext())/*.enableDrag(false)*/)
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnPagerBottomPopup: //自定义的底部弹窗
                 new XPopup.Builder(getContext())
                         .moveUpToKeyboard(false) //如果不加这个，评论弹窗会移动到软键盘上面
                         .asCustom(new PagerBottomPopup(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.tv1: //依附于某个View的Attach类型弹窗
             case R.id.tv2:
@@ -275,7 +275,7 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                                         toast("click " + text);
                                     }
                                 })
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowDrawerLeft: //像DrawerLayout一样的Drawer弹窗
                 new XPopup.Builder(getContext())
@@ -283,21 +283,21 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
 //                        .hasShadowBg(false)
                         .asCustom(new PagerDrawerPopup(getContext()))
 //                        .asCustom(new ListDrawerPopupView(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowDrawerRight:
                 new XPopup.Builder(getContext())
                         .popupPosition(PopupPosition.Right)//右边
                         .hasStatusBarShadow(true) //启用状态栏阴影
                         .asCustom(drawerPopupView)
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnFullScreenPopup: //全屏弹窗，看起来像Activity
                 new XPopup.Builder(getContext())
                         .hasStatusBarShadow(true)
                         .autoOpenSoftInput(true)
                         .asCustom(new CustomFullScreenPopup(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnAttachPopup1: //水平方向的Attach弹窗，就像微信朋友圈的点赞弹窗那样
                 new XPopup.Builder(getContext())
@@ -307,34 +307,34 @@ public class QuickStartDemo extends BaseFragment implements View.OnClickListener
                         .hasShadowBg(false) // 去掉半透明背景
                         .atView(v)
                         .asCustom(new CustomAttachPopup(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnAttachPopup2:
                 new XPopup.Builder(getContext())
                         .atView(v)
                         .hasShadowBg(false) // 去掉半透明背景
                         .asCustom(new CustomAttachPopup2(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnCustomEditPopup: //自定义依附在输入法之上的Bottom弹窗
                 new XPopup.Builder(getContext())
                         .autoOpenSoftInput(true)
                         .asCustom(new CustomEditTextBottomPopup(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowPosition1:
                 new XPopup.Builder(getContext())
                         .offsetY(300)
                         .popupAnimation(PopupAnimation.TranslateFromLeft)
                         .asCustom(new QQMsgPopup(getContext()))
-                        .show();
+                        .showWindow();
                 break;
             case R.id.btnShowPosition2:
                 new XPopup.Builder(getContext())
                         .isCenterHorizontal(true)
                         .offsetY(200)
                         .asCustom(new QQMsgPopup(getContext()))
-                        .show();
+                        .showWindow();
                 break;
         }
     }

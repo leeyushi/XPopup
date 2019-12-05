@@ -16,7 +16,7 @@ import com.lxj.xpopup.widget.SmartDragLayout;
  * Description: 在底部显示的Popup
  * Create by lxj, at 2018/12/11
  */
-public class BottomPopupView extends BasePopupView {
+public abstract class BottomPopupView extends BasePopupView {
     protected SmartDragLayout bottomPopupContainer;
     public BottomPopupView(@NonNull Context context) {
         super(context);
