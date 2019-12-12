@@ -28,6 +28,7 @@ public class PagerBottomPopup extends BottomPopupView {
         super(context);
     }
 
+
     @Override
     protected int getImplLayoutId() {
         return R.layout.custom_view_pager;

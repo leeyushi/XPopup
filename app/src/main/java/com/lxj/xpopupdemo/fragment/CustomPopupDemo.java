@@ -111,6 +111,7 @@ public class CustomPopupDemo extends BaseFragment {
             super(context);
         }
 
+
         @Override
         protected int getImplLayoutId() {
             return R.layout.custom_popup2;

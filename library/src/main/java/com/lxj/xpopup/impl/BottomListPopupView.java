@@ -32,6 +32,7 @@ public class BottomListPopupView extends BottomPopupView {
         super(context);
     }
 
+
     /**
      * 传入自定义的布局，对布局中的id有要求
      *

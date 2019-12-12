@@ -28,8 +28,6 @@ public abstract class BottomPopupView<T> extends BasePopupView {
 
     protected T mViewAttribute;
 
-    protected abstract void show();
-
     @Override
     protected int getPopupLayoutId() {
         return R.layout._xpopup_bottom_popup_view;

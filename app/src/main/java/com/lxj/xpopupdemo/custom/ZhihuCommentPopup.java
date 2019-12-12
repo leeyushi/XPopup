@@ -33,6 +33,7 @@ public class ZhihuCommentPopup extends BottomPopupView {
         super(context);
     }
 
+
     @Override
     protected int getImplLayoutId() {
         return R.layout.custom_bottom_popup;
