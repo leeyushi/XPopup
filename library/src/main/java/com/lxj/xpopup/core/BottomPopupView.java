@@ -1,10 +1,13 @@
 package com.lxj.xpopup.core;
 
 import android.content.Context;
+
 import androidx.annotation.NonNull;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.lxj.xpopup.R;
 import com.lxj.xpopup.animator.PopupAnimator;
 import com.lxj.xpopup.enums.PopupStatus;
@@ -18,14 +21,20 @@ import com.lxj.xpopup.widget.SmartDragLayout;
  */
 public abstract class BottomPopupView extends BasePopupView {
     protected SmartDragLayout bottomPopupContainer;
+
     public BottomPopupView(@NonNull Context context) {
         super(context);
     }
+
+    protected ViewAttribute mViewAttribute;
+
+    protected abstract void show();
 
     @Override
     protected int getPopupLayoutId() {
         return R.layout._xpopup_bottom_popup_view;
     }
+
 
     @Override
     protected void initPopupContent() {
@@ -47,6 +56,7 @@ public abstract class BottomPopupView extends BasePopupView {
             public void onClose() {
                 doAfterDismiss();
             }
+
             @Override
             public void onOpen() {
                 BottomPopupView.super.doAfterShow();
@@ -64,9 +74,9 @@ public abstract class BottomPopupView extends BasePopupView {
 
     @Override
     protected void doAfterShow() {
-        if(popupInfo.enableDrag){
+        if (popupInfo.enableDrag) {
             //do nothing self.
-        }else {
+        } else {
             super.doAfterShow();
         }
     }
