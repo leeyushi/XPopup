@@ -26,7 +26,7 @@ public abstract class BottomPopupView<T> extends BasePopupView {
         super(context);
     }
 
-    protected T mViewAttribute;
+    public T mViewAttribute;
 
     @Override
     protected int getPopupLayoutId() {
